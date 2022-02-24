@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -DK=5 -DOPTIX_SAMPLE_DIR_DEFINE=optixNSearch -DOPTIX_SAMPLE_NAME_DEFINE=optixNSearch -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -std=c++11 -o optixNSearch/CMakeFiles/optixNSearch.dir/main.cpp.o -c /home/chenning/Desktop/rtnn/src/optixNSearch/main.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/optixNSearch/main.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -DK=5 -DOPTIX_SAMPLE_DIR_DEFINE=optixNSearch -DOPTIX_SAMPLE_NAME_DEFINE=optixNSearch -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -std=c++11 -o optixNSearch/CMakeFiles/optixNSearch.dir/search.cpp.o -c /home/chenning/Desktop/rtnn/src/optixNSearch/search.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/optixNSearch/search.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -DK=5 -DOPTIX_SAMPLE_DIR_DEFINE=optixNSearch -DOPTIX_SAMPLE_NAME_DEFINE=optixNSearch -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -std=c++11 -o optixNSearch/CMakeFiles/optixNSearch.dir/optix.cpp.o -c /home/chenning/Desktop/rtnn/src/optixNSearch/optix.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/optixNSearch/optix.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -DK=5 -DOPTIX_SAMPLE_DIR_DEFINE=optixNSearch -DOPTIX_SAMPLE_NAME_DEFINE=optixNSearch -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -std=c++11 -o optixNSearch/CMakeFiles/optixNSearch.dir/sort.cpp.o -c /home/chenning/Desktop/rtnn/src/optixNSearch/sort.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/optixNSearch/sort.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -DK=5 -DOPTIX_SAMPLE_DIR_DEFINE=optixNSearch -DOPTIX_SAMPLE_NAME_DEFINE=optixNSearch -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -std=c++11 -o optixNSearch/CMakeFiles/optixNSearch.dir/check.cpp.o -c /home/chenning/Desktop/rtnn/src/optixNSearch/check.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/optixNSearch/check.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -DK=5 -DOPTIX_SAMPLE_DIR_DEFINE=optixNSearch -DOPTIX_SAMPLE_NAME_DEFINE=optixNSearch -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -std=c++11 -o optixNSearch/CMakeFiles/optixNSearch.dir/util.cpp.o -c /home/chenning/Desktop/rtnn/src/optixNSearch/util.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/optixNSearch/util.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -Dsutil_7_sdk_EXPORTS -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include -I../sutil    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -fPIC -std=c++11 -o sutil/CMakeFiles/sutil_7_sdk.dir/IDFactory.cpp.o -c /home/chenning/Desktop/rtnn/src/sutil/IDFactory.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/sutil/IDFactory.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -Dsutil_7_sdk_EXPORTS -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include -I../sutil    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -fPIC -std=c++11 -o sutil/CMakeFiles/sutil_7_sdk.dir/sutil.cpp.o -c /home/chenning/Desktop/rtnn/src/sutil/sutil.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/sutil/sutil.cpp"
+},
+{
+  "directory": "/home/chenning/Desktop/rtnn/src/build",
+  "command": "/usr/bin/c++ -Dsutil_7_sdk_EXPORTS -I/home/chenning/Desktop/rtnn/include -I../ -Iinclude -I. -I/usr/local/cuda-11.4/include -I../sutil    -Wall -Wsign-compare -Wno-multichar  -fPIC -O0 -g3 -fPIC -std=c++11 -o sutil/CMakeFiles/sutil_7_sdk.dir/Timing.cpp.o -c /home/chenning/Desktop/rtnn/src/sutil/Timing.cpp",
+  "file": "/home/chenning/Desktop/rtnn/src/sutil/Timing.cpp"
+}
+]

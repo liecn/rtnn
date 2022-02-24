@@ -1,0 +1,104 @@
+========================================
+numPoints: 8
+numQueries: 8
+searchMode: radius
+radius: 2
+Deferred free? true
+E2E Measure? true
+K: 50
+Same P and Q? true
+Query partition? true
+Approx query partition mode: 2
+Auto batching? true
+Auto crRatio? true
+cellRadiusRatio: 8
+mcScale: 4
+crStep: 1.01
+Interleave? true
+qGasSortMode: 2
+pointSortMode: 1
+querySortMode: 1
+gsrRatio: 1
+Gather after gas sort? false
+========================================
+
+	scene boundary: (0.000000, 0.000000, 0.000000), (10.000000, 5.000000, 74.000000)
+time filter queries: 0.004488 ms
+
+time upload points and/or queries: 121.254 ms
+
+pNArrayCount: 0
+qNArrayCount: 8
+cellArrayCount: 3
+	spaceAval: 24009.186
+	particleArray: 0.000
+	particleData: 0.000
+	returnData: 0.002
+	gpuMemused: 0.000
+	gasSize: 0.000
+	instGasSize: 0.001
+spaceAvail for GAS: 24009.185547
+max numofBatches: 174829552.000000
+GAS limited cellSize: 0.000000
+Sorting limited cellSize: 0.012082
+	Grid dimension (without meta grids): 828, 414, 6125
+	Grid dimension (with meta grids): 832, 448, 6144
+	Number of cells: 2290089984
+	Cell size: 0.012082
+0.013262+26208.000000=26208.013672, 24009.185547
+	Grid dimension (without meta grids): 820, 410, 6065
+	Grid dimension (with meta grids): 832, 448, 6080
+	Number of cells: 2266234880
+	Cell size: 0.012203
+0.013132+25935.000000=25935.013672, 24009.185547
+	Grid dimension (without meta grids): 812, 406, 6005
+	Grid dimension (with meta grids): 832, 448, 6016
+	Number of cells: 2242379776
+	Cell size: 0.012325
+0.013004+25662.000000=25662.013672, 24009.185547
+	Grid dimension (without meta grids): 804, 402, 5945
+	Grid dimension (with meta grids): 832, 448, 5952
+	Number of cells: 2218524672
+	Cell size: 0.012448
+0.012876+25389.000000=25389.013672, 24009.185547
+	Grid dimension (without meta grids): 796, 398, 5886
+	Grid dimension (with meta grids): 832, 448, 5888
+	Number of cells: 2194669568
+	Cell size: 0.012572
+0.012750+25116.000000=25116.013672, 24009.185547
+	Grid dimension (without meta grids): 788, 394, 5828
+	Grid dimension (with meta grids): 832, 448, 5888
+	Number of cells: 2194669568
+	Cell size: 0.012698
+0.012625+25116.000000=25116.011719, 24009.185547
+	Grid dimension (without meta grids): 780, 390, 5770
+	Grid dimension (with meta grids): 832, 448, 5824
+	Number of cells: 2170814464
+	Cell size: 0.012825
+0.012502+24843.000000=24843.011719, 24009.185547
+	Grid dimension (without meta grids): 772, 386, 5713
+	Grid dimension (with meta grids): 832, 448, 5760
+	Number of cells: 2146959360
+	Cell size: 0.012953
+0.012379+24570.000000=24570.011719, 24009.185547
+	Grid dimension (without meta grids): 765, 383, 5657
+	Grid dimension (with meta grids): 768, 384, 5696
+	Number of cells: 1679818752
+	Cell size: 0.013083
+0.012258+19224.000000=19224.011719, 24009.185547
+	Calculated cellRadiusRatio: 152.870560 (0.012258, 19224.000000)
+	Calculated maxBatches: 89.260
+	Memory utilization: 80.069%
+time create data structures: 0.706117 ms
+
+time create context: 27.0368 ms
+
+time create pipeline: 527.561 ms
+
+time create SBT: 0.037973 ms
+
+	Grid dimension (without meta grids): 765, 383, 5657
+	Grid dimension (with meta grids): 768, 384, 5696
+	Number of cells: 1679818752
+	Cell size: 0.013083
+	Num of Rep queries: 8

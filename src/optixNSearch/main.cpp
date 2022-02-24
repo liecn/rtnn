@@ -139,7 +139,6 @@ int main( int argc, char* argv[] )
           if (state.gsrRatio != 1)
             createGeometry (state, i, state.launchRadius[i]);
         }
-
         search(state, i);
       }
     }

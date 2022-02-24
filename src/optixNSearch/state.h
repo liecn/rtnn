@@ -72,7 +72,7 @@ struct RTNNState
 
     int32_t                     device_id                 = 0;
     std::string                 searchMode                = "radius";
-    std::string                 pfile;
+    std::string                 pfile                     = "/home/chenning/Desktop/rtnn/src/samplepc.txt";
     std::string                 qfile;
     unsigned int                knn                       = 50;
     float                       radius                    = 2.0;

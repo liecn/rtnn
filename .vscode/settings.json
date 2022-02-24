@@ -1,0 +1,13 @@
+{
+    // "cmake.cmakePath": "/opt/software/CMake/3.18.4-GCCcore-9.3.0/bin/cmake",
+    // "cmake.cmakePath": "/opt/software/CMake/3.17.1/bin/cmake",
+    "cmake.sourceDirectory": "${workspaceFolder}/src",
+    "cmake.buildDirectory": "${workspaceFolder}/src/build",
+    "cmake.configureArgs": [
+        "-DKNN=5",
+        ".."
+    ],
+    "files.associations": {
+        "iosfwd": "cpp"
+    },
+}

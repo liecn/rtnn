@@ -1,0 +1,19 @@
+# ninja log v5
+0	74	1642726030090187378	build.ninja	afb16a59e25c6c4d
+31297	32134	1642647382166380874	optixNSearch/CMakeFiles/optixNSearch.dir/optix.cpp.o	5e33e9d9ffe0b9e1
+468	1036	1642647351068007468	lib/ptx/optixNSearch_generated_aabb.cu.o	1cb2cbd3126fce00
+468	31296	1642647381318343422	lib/ptx/optixNSearch_generated_thrust_helper.cu.o	b76419a3ea96912f
+423	465	1642647403562325780	lib/libsutil_7_sdk.so	79ec96ffee59c363
+2	423	1642647403520323926	sutil/CMakeFiles/sutil_7_sdk.dir/sutil.cpp.o	726133a1d7d331ec
+0	248	1642647350281972754	sutil/CMakeFiles/sutil_7_sdk.dir/Timing.cpp.o	a4c72302e6df4ed0
+31296	31839	1642647381872367889	optixNSearch/CMakeFiles/optixNSearch.dir/main.cpp.o	e1e4a4c5c36c2f8f
+31297	31744	1642647381777363693	optixNSearch/CMakeFiles/optixNSearch.dir/check.cpp.o	b4caed68c461e85
+465	630	1642647403726333024	bin/optixNSearch	8c37ccc6e429e87e
+31297	31907	1642647381940370892	optixNSearch/CMakeFiles/optixNSearch.dir/util.cpp.o	310fe70df2614340
+0	12	1642647350046962375	sutil/CMakeFiles/sutil_7_sdk.dir/IDFactory.cpp.o	c80944c354d3ddd4
+31297	32540	1642647382571398760	optixNSearch/CMakeFiles/optixNSearch.dir/sort.cpp.o	2a7a8eb74d5b026d
+468	1427	1642647351460024780	lib/ptx/optixNSearch_generated_grid.cu.o	ddd462005c0d419c
+31296	31850	1642647381884368419	optixNSearch/CMakeFiles/optixNSearch.dir/search.cpp.o	d60211147edb7b96
+1	421	1642726030705214943	sutil/CMakeFiles/sutil_7_sdk.dir/sutil.cpp.o	726133a1d7d331ec
+421	464	1642726030747216826	lib/libsutil_7_sdk.so	79ec96ffee59c363
+464	626	1642726030908224042	bin/optixNSearch	8c37ccc6e429e87e
