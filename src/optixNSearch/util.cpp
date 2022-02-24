@@ -175,6 +175,7 @@ void printUsageAndExit( const char* argv0 )
     std::cerr << "  --gpumemused      | -gmu    Specify GPU memory that's occupied by other jobs. This allows a better estimation of crRatio to avoid OOM errors. Default is 0.\n";
     std::cerr << "  --crStep          | -crs    Specify the step size in iteratively determining the best crRatio. Must be > 1. Default is 1.01.\n";
     std::cerr << "  --metacellScale   | -mc     Specify the metacell scale. See comments in |genGridInfo|. Default is 4.\n";
+    std::cerr << "  --estgassize      | -egs    Specify the estimated GAS size in MB, which will be used to help determine the crRatio if -ac is enabled. Default is -1, indicating that the GAS size will be automatically inferred. If specified the value can't be negative.\n";
 
     exit( 0 );
 }
@@ -305,6 +306,14 @@ void parseArgs( RTNNState& state,  int argc, char* argv[] ) {
           if( i >= argc - 1 )
               printUsageAndExit( argv[0] );
           state.gpuMemUsed = std::stof(argv[++i]);
+      }
+      else if( arg == "--estgassize" || arg == "-egs" )
+      {
+          if( i >= argc - 1 )
+              printUsageAndExit( argv[0] );
+          state.estGasSize = std::stof(argv[++i]);
+          if (state.estGasSize < 0)
+              printUsageAndExit( argv[0] );
       }
       else if( arg == "--gather" || arg == "-g" )
       {
@@ -558,9 +567,11 @@ float calcCRRatio(RTNNState& state) {
   fprintf(stdout, "pNArrayCount: %d\nqNArrayCount: %d\ncellArrayCount: %d\n", pNArrayCount, qNArrayCount, cellArrayCount);
 
   float particleArraysSize = pNArrayCount * N * sizeof(unsigned int) + qNArrayCount * Q * sizeof(unsigned int);
-  // TODO: conservatively estimate the gas size as 1.5 times the point size (better fit?)
-  // in cases where search radius is very small, the GAS size can be much larger than 1.5X.
-  float gasSize = state.numPoints * sizeof(float3) * 1.5;
+  // conservatively estimate the gas size as 1.5 times the point size. the
+  // actual gas size depends on the search radius (i.e., aabb size), and in
+  // cases where search radius is very small, the GAS size can be much larger
+  // than 1.5X, in which case one would directly specify the estGasSize.
+  float gasSize = (state.estGasSize == -1) ? state.numPoints * sizeof(float3) * 1.5: state.estGasSize * 1024 * 1024;
   float aabbSize = state.numPoints * sizeof(OptixAabb);
   // instGasSize is the temporary memory required when building a GAS (not
   // including the GAS itself). 8x is for |d_temp_buffer_gas| and
@@ -571,12 +582,14 @@ float calcCRRatio(RTNNState& state) {
 
   // Sources of over-estimation of memory usage: gas size (probably lower than
   // 1.5 times), instGasSize (mostly about 6.6 times from what's observed), the
-  // actual # of batches could be much smaller than the theoretical maximal.
-  // the last one we just really can't control since it's a run-time decision.
+  // actual # of batches could be much smaller than the theoretical maximal,
+  // which would happen, for instance, when the point distribution is uniform.
+  // Try: -f data/buddha.txt -sm radius -r 64 -k 200 -d 0 -a 0 -c 1.
+  // The last one we just really can't control since it's a run-time decision.
   // if a similar dataset is to be used over and over again, one could estimate
-  // the memory waste and supply a negative -gmu accordingly. We could also
-  // delay freeing gas-related temporary structures if we realize that we won't
-  // have a memory problem (e.g., actual batch # << theoretical maximal).
+  // the memory waste and supply a negative -gmu accordingly. We could delay
+  // freeing gas-related temporary structures if we realize that we won't have
+  // a memory problem (e.g., actual batch # << theoretical maximal).
   if (!state.deferFree) {
     fprintf(stdout, "\tparticleArray: %.3f\n\tparticleData: %.3f\n\treturnData: %.3f\n\tgpuMemused: %.3f\n\tgasSize: %.3f\n\tinstGasSize: %.3f\n",
                      particleArraysSize/1024/1024,

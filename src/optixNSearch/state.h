@@ -75,6 +75,7 @@ struct RTNNState
     std::string                 pfile                     = "/home/chenning/Desktop/rtnn/src/samplepc.txt";
     std::string                 qfile;
     unsigned int                knn                       = 50;
+    float                       gRadius                   = 2.0;
     float                       radius                    = 2.0;
     int                         qGasSortMode              = 2; // no GAS-based sort vs. 1D vs. ID
     int                         pointSortMode             = 1; // no sort vs. morton order vs. raster order vs. 1D order
@@ -117,6 +118,7 @@ struct RTNNState
     int                         maxBatchCount             = 1;
     float                       totDRAMSize               = 0; // GB
     float                       gpuMemUsed                = 0; // MB
+    float                       estGasSize                = -1; // MB
 
     float3                      pMin;
     float3                      pMax;
